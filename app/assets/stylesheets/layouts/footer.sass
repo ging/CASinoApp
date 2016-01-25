@@ -1,0 +1,96 @@
+footer#footer
+  height: 60px
+  background-color: white
+  //@include box-shadow(0 1px 10px rgba(0, 0, 0, 0.2))
+  opacity: 0.98
+  position: fixed
+  width: 100%
+  z-index: $zindex-footer-fixed
+  bottom: 0
+  text-align: center
+
+  //@media (max-width: $screen-xs-max)
+    display: none
+
+  nav.footercontent
+
+    ul.ul-content
+      margin: 0
+      padding: 10px 0
+      li
+        display: inline
+        color: $gray
+        outline: none
+        a.style_link_footer
+          color: $gray
+        .btn
+          background-color: transparent
+          background-image: none
+          border: 0px solid
+          box-shadow: none
+          color: $gray
+          a
+            color: $gray
+          .ddfootertitle
+            img
+              margin-right: 11px
+              width: 20%
+              margin-top: -1px
+      li.social-img
+        img
+          width: 30px
+      li.item_footer
+        float: left
+        img
+          height: 40px
+          margin-right: 10px
+          float: left
+        .links
+          float: left
+          color: $orange-gray-45
+          font-size: 1em
+          a
+            color: $orange-gray-45
+            text-decoration: none
+            &:hover
+              color: black
+        .copyright
+          font-size: 0.9em
+          color: $orange-gray-45
+          text-align: left
+      li.dropup
+        float: right
+        .btn
+          padding: 9px 6px
+        .logo_cm
+          height: 32px
+          margin-left: 15px
+          margin-top: 5px
+        .ddfootertitle
+          color: $orange-gray-45
+          &:hover
+            color: $black
+          img
+            margin: 5px 10px 0 0
+
+      li.open
+        .dropdown-menu
+          left: unset
+          margin-bottom: 0
+
+.clear
+  clear: both
+
+#push
+  height: 100px
+  clear: both
+
+footer.fixed-bottom
+  position: fixed
+  left: 0
+  bottom: 0
+  width: 100%
+
+
+div#wrap.wrap-when-fixed-bottom
+  padding-bottom: 80px  /* must be same height as the footer */

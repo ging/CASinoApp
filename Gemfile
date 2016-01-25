@@ -8,6 +8,7 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'therubyracer'
+  gem 'bootstrap-sass'
 end
 
 gem 'casino'

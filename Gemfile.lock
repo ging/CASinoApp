@@ -34,6 +34,8 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.10)
+    bootstrap-sass (3.1.1.0)
+      sass (~> 3.2)
     builder (3.2.2)
     capistrano (2.15.7)
       highline
@@ -198,6 +200,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   capistrano (~> 2.15)
   casino
   casino-activerecord_authenticator
@@ -216,4 +219,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

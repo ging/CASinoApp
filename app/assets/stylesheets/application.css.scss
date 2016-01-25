@@ -9,5 +9,16 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  */
+//@import 'casino';
+
+/* Bootstrap styles */
+@import "bootstrap";
+
+/* Orange styles */
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/scaffolding';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/pages';
