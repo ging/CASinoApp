@@ -11,6 +11,7 @@ group :assets do
   gem 'jquery-ui-rails', '= 4.1.2'
   gem 'therubyracer'
   gem 'bootstrap-sass'
+  gem 'font-awesome-sass', '~> 4.5.0'
 end
 
 gem 'casino'

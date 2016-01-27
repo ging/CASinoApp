@@ -9,7 +9,7 @@
   <div class="login box">
     <%= render 'messages' %>
     <div class="logo">
-       <%#= image_tag "logo.png" %>
+       <%= image_tag "orange/3.jpg" %>
     </div>
 
     <div class="form">
@@ -23,7 +23,7 @@
         <%= label_tag :rememberMe do %>
           <%= check_box_tag :rememberMe, 1, params[:rememberMe] %> <%= t('login.label_remember_me') %>
         <% end %>
-        <%= button_tag t('login.label_button'), :class => 'button' %>
+        <%= button_tag t('login.label_button'), :class => 'button btn btn-primary pull-right' %>
       <% end %>
     </div>
   </div>

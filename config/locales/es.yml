@@ -719,6 +719,11 @@ es:
     go: "Ir al enlace"
     title3: "Escribe el enlace que quieres subir"
     name: "enlace"
+  login:
+    label_username: "Usuario"
+    label_password: "Contraseña"
+    label_remember_me: "Recuérdame"
+    label_button: "Acceder"
   lre:
     data_error: "Se produjo un error y el servidor de datos responde con un código de %{code}"
     json_error: "Hubo un error con el contenido devueltos, pruebe con otros términos de búsqueda"
