@@ -15,7 +15,7 @@ gem 'jquery-ui-rails', '= 4.1.2'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 4.5.0'
 
-gem 'casino', git: 'https://github.com/rbCAS/CASino.git'
+gem 'casino', git: 'https://github.com/bakku/CASino.git'
 gem 'casino-ldap_authenticator', git: 'https://github.com/rbCAS/casino-ldap_authenticator.git'
 gem 'casino-activerecord_authenticator', git: 'https://github.com/rbCAS/casino-activerecord_authenticator.git'
 

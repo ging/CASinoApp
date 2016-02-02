@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/rbCAS/CASino.git
-  revision: 5b53090c9f95f57842748de277007a0f6c941030
+  remote: https://github.com/bakku/CASino.git
+  revision: a50cd1252723b0ce1b61b95b0ea1cfe8575bd7f1
   specs:
     casino (4.0.3)
       addressable (~> 2.3)
