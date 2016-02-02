@@ -38,4 +38,5 @@ end
 group :development do
   gem 'capistrano', '~> 2.15'
   gem 'foreman'
+  gem 'pry', '= 0.9.12.6'
 end

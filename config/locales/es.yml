@@ -724,6 +724,8 @@ es:
     label_password: "Contraseña"
     label_remember_me: "Recuérdame"
     label_button: "Acceder"
+    label_button_educa: "Ir a EducaInternet"
+    label_button_mooc: "Ir al MOOC"
   lre:
     data_error: "Se produjo un error y el servidor de datos responde con un código de %{code}"
     json_error: "Hubo un error con el contenido devueltos, pruebe con otros términos de búsqueda"

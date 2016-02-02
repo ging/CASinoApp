@@ -15,7 +15,7 @@
     <div class="form">
       <%= form_tag(login_path, method: :post, id: 'login-form') do %>
         <%= hidden_field_tag :lt, CASino::LoginTicket.create.ticket %>
-        <%= hidden_field_tag :service, params[:service] unless params[:service].nil? %>
+        <%= hidden_field_tag :service, params[:service] %>
         <%= label_tag :username, t('login.label_username') %>
         <%= text_field_tag :username, params[:username], autofocus:true %>
         <%= label_tag :password, t('login.label_password') %>
@@ -23,9 +23,29 @@
         <%= label_tag :rememberMe do %>
           <%= check_box_tag :rememberMe, 1, params[:rememberMe] %> <%= t('login.label_remember_me') %>
         <% end %>
-        <%= button_tag t('login.label_button'), :class => 'button btn btn-primary pull-right' %>
+          <%= button_tag t('login.label_button'), :id => "submit_button",:class => 'button btn btn-primary pull-right' %>
       <% end %>
+      <%if !params[:service]%>
+          <%= button_tag t('login.label_button_educa'),:id => 'educa_button', :class => 'button btn btn-primary pull-right' %>
+          <%= button_tag t('login.label_button_mooc'),:id => 'mooc_button', :class => 'button btn btn-primary pull-right' %>
+      <%end%>
     </div>
   </div>
 
 </div>
+
+<%if !params[:service]%>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#submit_button").hide();
+      $("#educa_button").click(function(){
+        $("#service").val("http://educainternet.es");
+        $("#submit_button").click();
+      });
+      $("#mooc_button").click(function(){
+        $("#service").val("http://moodle.educainternet.es");
+        $("#submit_button").click();
+      });
+    });
+  </script>
+<%end%>
