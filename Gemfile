@@ -13,7 +13,7 @@ end
 gem 'jquery-rails', '= 3.1.0'
 gem 'jquery-ui-rails', '= 4.1.2'
 gem 'bootstrap-sass'
-gem 'font-awesome-sass', '~> 4.5.0'
+gem 'font-awesome-rails'
 
 gem 'casino', git: 'https://github.com/bakku/CASino.git'
 gem 'casino-ldap_authenticator', git: 'https://github.com/rbCAS/casino-ldap_authenticator.git'

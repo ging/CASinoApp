@@ -62,4 +62,8 @@ CASinoApp::Application.configure do
   config.active_support.deprecation = :notify
 
   config.eager_load = true
+
+  config.relative_url_root = "/cas"
+  config.action_controller.relative_url_root = "/cas"
+
 end
