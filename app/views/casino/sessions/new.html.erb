@@ -1,4 +1,5 @@
 <% login_notice = t('login.notice', default: '') %>
+<%= render 'messages' %>
 
 <div class="container">
   <% unless login_notice.blank? %>
@@ -6,8 +7,7 @@
     <i class="icon-info"></i> <%= login_notice %>
   </div>
   <% end %>
-  <div class="login box">
-    <%= render 'messages' %>
+  <div class="login box">    
     <div class="logo">
        <%= image_tag "orange/3.jpg" %>
     </div>
