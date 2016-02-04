@@ -1,4 +1,7 @@
 es:
+  login_credential_acceptor:
+    invalid_login_credentials: "Nombre de usuario o contraseña incorrectos. Inténtelo de nuevo. Si tiene problemas con el acceso puede ponerse en contacto con nosotros en contacto@educainternet.es"
+    invalid_login_ticket: "Vuelva a hacer login por favor"
   orange_front:
     carousel:
       title1: "Crea"
