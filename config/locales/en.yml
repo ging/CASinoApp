@@ -732,7 +732,9 @@ en:
     label_remember_me: "Remember me"
     label_button: "Log In"
     label_button_educa: "Go to EducaInternet"
-    label_button_mooc: "Go to the MOOC"
+    label_button_mooc: "Go to the Course"
+    msg_intro_educa: "Write your credentials to access EducaInternet" 
+    msg_intro_mooc: "Write your credentials to access the course"
   lre:
     data_error: "There was an error and the data server responded with a code %{code}"
     json_error: "There was an error with the returned contents, try with another search terms"
