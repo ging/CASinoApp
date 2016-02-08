@@ -734,6 +734,7 @@ en:
     label_button_educa: "Go to EducaInternet"
     label_button_mooc: "Go to the Course"
     msg_intro_educa: "Write your credentials to access EducaInternet"
+    msg_intro_existente: "Write your credentials to access the course. Remember that you have to own an @educa.madrid.org email address"
     msg_intro_mooc: "Write your credentials to access the course"
     title: "Login"
   lre:

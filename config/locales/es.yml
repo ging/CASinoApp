@@ -730,6 +730,7 @@ es:
     label_button_educa: "Ir a EducaInternet"
     label_button_mooc: "Ir al Curso"
     msg_intro_educa: "Introduce tus datos para entrar a EducaInternet"
+    msg_intro_existente: "Introduce tus datos para apuntarte al curso. Recuerda que debes tener un email @educa.madrid.org"
     msg_intro_mooc: "Introduce tus datos para entrar al curso"
     title: "Accede"
   lre:
