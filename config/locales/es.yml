@@ -723,7 +723,7 @@ es:
     title3: "Escribe el enlace que quieres subir"
     name: "enlace"
   login:
-    label_username: "Usuario"
+    label_username: "Email"
     label_password: "Contraseña"
     label_remember_me: "Recuérdame"
     label_button: "Acceder"
