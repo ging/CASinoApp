@@ -18,8 +18,8 @@
 
       <%= form_tag(login_path, method: :post, id: 'login-form') do %>
         <h4><%=t('login.title')%></h4>
-        <%if params[:service] && (params[:service].starts_with? "http://educainternet.es/users/edit?mooc=true")%>
-          <div class="msg_intro"><%=t('login.msg_intro_existente')%></div>
+        <%if params[:first]%>
+          <div class="msg_intro"><%=t('login.msg_intro_first')%></div>
         <%elsif params[:service] && (params[:service].starts_with? "http://educainternet.es")%>
           <div class="msg_intro"><%=t('login.msg_intro_educa')%></div>
         <%elsif params[:service] && (params[:service].starts_with? "http://moodle.educainternet.es")%>
