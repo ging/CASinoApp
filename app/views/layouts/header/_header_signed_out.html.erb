@@ -1,82 +1,38 @@
-<% front_or_home = (params[:controller] == 'home' || params[:controller] == 'frontpage') ? true:false%>
-
-<nav class="navbar navbar-default navbar-fixed-top <%='navbar-home' if front_or_home%>" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
-    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <a class="btn-navbar btn btn-default <%='btn-home' if front_or_home%>" data-toggle="collapse" data-target=".nav-collapse">
-        <i class="fa fa-bars"></i>
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse-out">
+        <i class="fa fa-angle-down"></i>
       </a>
 
-      <!-- BRAND -->
-      <div class="brand">
-        <a href="/" class="logo <%='logo-home' if front_or_home%>">Educa<span class="logo_bold">Internet</span></a>
+      <!--logo-->
+      <div class="logo-header">
+        <%= link_to(image_tag('vish/brand.svg', :alt => t('site.name')), '/', :class => "logo"); %>
       </div>
 
-      <!--______________________________desktop-->
-      <div class=" hidden-phone hidden-tablet">
+      <!--browse-->
+    </div>
+    <!--collapse-->
+    <div class="collapse navbar-collapse" id="nav-collapse-out">
 
-        <!-- MENU -->
-        <ul class="nav navbar-nav navbar-right">
-
-          <!-- teach and learn buttons -->
-          <li class="btn btn-default btn-header <%='btn-home' if front_or_home%>"><a class="linker" href="http://educainternet.es/learn"><%=t('orange_front.header.formate')%></a></li>
-          <li class="btn btn-default btn-header <%='btn-home' if front_or_home%>"><a class="linker" href="http://educainternet.es/teach"><%=t('orange_front.header.ensena')%></a></li>
-
-          <!-- Help button -->
-          <li class=" dropdown toggler ">
-            <div data-toggle="dropdown" class="btn btn-icon <%='btn-home-icon' if front_or_home%> without-dropdown-toggle">
-              <i class="fa fa-question-circle"></i>
-            </div>
-
-            <ul class="dropdown-menu add-menu" role="menu" >
-
-              <li>
-                <a href="http://educainternet.es/overview">
-                  <i class="fa fa-question"> </i>
-                  <span><%= t('overview_title') %></span>
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="https://www.youtube.com/channel/UCo-73n6eZBWNBs2gvKLyBhQ">
-                  <i class="fa fa-youtube-play"> </i>
-                  <span><%= t('youtube') %></span>
-                </a>
-              </li>
-              <li>
-                <%#= link_to user_manual_path do %>
-                <a target="_blank" href="http://educainternet.es/EducaInternet.pdf">
-                  <i class='fa fa-download'> </i>
-                  <span><%= t('help_manual')%></span>
-                </a>
-                <%# end %>
-              </li>
-              <li>
-                <a href="contributors">
-                  <i class="fa fa-graduation-cap"> </i>
-                  <span><%= t('orange_front.footer.contributors') %></span>
-                </a>
-              </li>
-            </ul>
+      <!-- desktop -->
+      <ul class="btn-toolbar desktop-nav">
+          <li class="btn-group">
+            <a type="button" class="btn btn-default" href="http://vishub.org/users/sign_up">
+              <%=t("sign_up")%>
+            </a>
           </li>
-
-          <li class="btn btn-default btn-header <%='btn-home' if front_or_home%>"><a class="linker" href="http://educainternet.es/users/sign_up"><%=t("sign_up")%></a></li>
-          <li class="btn btn-primary btn-header btn-access dropdown">
-            <a href="/login" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="menu_bold"><%=t("sign_in")%><i class="icon-angle-down"></i></span></a>
+          <li class="btn-group">
+            <a type="button" id="drop3" class="btn btn-primary" href="/login"><%=t("sign_in")%></a>
           </li>
-        </ul>
+      </ul>
 
-        <!--search
-
-        <li class="search-ui ">
-          <%#= render partial: 'layouts/header/uisearch_header' %>
-        </li>-->
-      </div>
-
-
-      <!--________________________mobile/tablet-->
+      <!-- mobile/tablet -->
       <div class="nav-collapse navbar-responsive-collapse collapse hidden-desktop  MOBILE ">
         <%= render partial: 'layouts/header/header_signed_out_mobile' %>
       </div>
+    </div>
   </div>
 </nav>
 

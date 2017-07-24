@@ -13,7 +13,7 @@
     float: left
     border: 1px solid #EEEEEE
     &:hover
-      border: 1px solid $orange-primary
+      border: 1px solid $brand-primary
   a
     padding: 0
 
@@ -188,7 +188,7 @@
       margin-top: 1px
       a
         text-decoration: none
-        color: $orange-primary
+        color: $brand-primary
         cursor: pointer
     .name,
     .action
@@ -433,9 +433,8 @@
     @include box-shadow(none)
 
 @mixin btn-default
-  border-radius: 0
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border)
-  color: $orange-gray-75
+  color: $gray-dark
   &:hover,
   &:focus,
   &:active,
@@ -448,8 +447,7 @@
 
 @mixin btn-primary
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border)
-  border-radius: 0
-  background-color: $orange-primary
+  background-color: $brand-primary
   border-color: $brand-primary
   &:hover,
   &:focus,
@@ -457,8 +455,8 @@
   &.active,
   &.disabled,
   &[disabled]
-    background-color: darken($orange-primary, 5%)
-    border-color: darken($orange-primary, 5%)
+    background-color: darken($brand-primary, 5%)
+    border-color: darken($brand-primary, 5%)
 
 @mixin btn-secundary
   background-color: $gray-lighter
@@ -471,3 +469,172 @@
   &[disabled]
     background-color: darken($gray-lighter, 20%)
     color: $gray-dark
+
+@mixin logo-img
+  img
+    float: left
+    padding: 3px 0px
+    margin-right: 15px
+    @include opacity (0.7)
+    &:hover
+      @include opacity (1)
+
+@mixin dropdown-log
+  padding: 5px 6px
+  @include log
+
+
+@mixin log
+  .form-group
+    margin-bottom: 10px
+    min-height: 76px
+    .add-on
+      padding: 5px 8px
+  input
+    &[type="email"],
+    &[type="password"]
+      float: none
+    &[type="email"]
+      margin: 0 0 10px
+    &[type="password"]
+      margin: 0
+
+  .checkbox
+    float: left
+    margin-top: 0
+    margin-bottom: 5px
+    padding-left: 0
+    span
+      color: $white
+  input
+    &[type="submit"]
+      float: right
+  hr
+    margin: 0px
+    clear: both
+    border: 1px solid transparent
+  a,
+  label
+    color: $white
+    padding-left: 0
+
+  .new_user
+    .remember_password
+      clear: both
+      a
+        font-size: 0.8em
+        color: #FAFAFA
+        &:hover
+          background-color: none !important
+          text-decoration: none
+          color: $white
+
+
+@mixin devise-box
+  @include box-shadow(0 -1px 5px rgba(50,51,51,0.10))
+  @include border-top-radius ($border-radius-base)
+  @include border-bottom-radius ($border-radius-base)
+  @include make-sm-column(6, $gutter: $grid-gutter-width)
+  @include make-md-column(6, $gutter: $grid-gutter-width)
+  @include make-lg-column(6, $gutter: $grid-gutter-width)
+  @include center-block
+  padding: 12px 15px !important
+  background-color: $white
+  color: $gray
+  float: none !important
+  display: block
+  .form-group
+    margin-bottom: 0
+  h4
+    font-family: $corporate-font-family-sans-serif-Medium
+    margin: 0 0 18px 0
+  p
+    margin: 10px 0
+  label
+    margin-bottom: 0px
+    width: 100%
+    padding: 10px 0 0px
+  input
+    &[type="text"],
+    &[type="email"],
+    &[type="password"]
+      width: 100%
+
+  hr
+    border: 1px solid #E7E7E7
+  #remember
+    display: inline
+    padding-left: 0
+    color: $gray
+    input
+      float: none
+      margin: 0
+  .action
+    clear: both
+    min-height: 40px
+    input
+      &[type="submit"]
+        float: right
+
+@mixin hidden-xs
+  @extend .hidden-xs
+
+@mixin hidden-sm
+  @extend .hidden-sm
+
+@mixin hidden-md
+  @extend .hidden-md
+
+@mixin hidden-lg
+  @extend .hidden-lg
+
+@mixin fix-img-addon
+  @media (max-width: 877px)
+    width: 32px
+    height: 32px
+  @media (min-width: 877px)
+    width: 34px
+    height: 34px
+  @media (min-width: 1134px)
+    width: 35px
+    height: 35px
+
+// Breakpoints.
+@mixin breakpoint($point)
+  @if $point == break-1
+    @media screen and (min-width:$break-1)
+      @content
+  @else if $point == break-2
+    @media screen and (min-width:$break-2)
+      @content
+  @else if $point == break-3
+    @media screen and (min-width:$break-3)
+      @content
+  @else if $point == break-4
+    @media screen and (min-width:$break-4)
+      @content
+
+
+// Root font-size in %.
+@mixin rootsize-0
+  font-size: #{$rootsize-0 / 16 * 100%}
+@mixin rootsize-1
+  font-size: #{$rootsize-1 / 16 * 100%}
+@mixin rootsize-2
+  font-size: #{$rootsize-2 / 16 * 100%}
+@mixin rootsize-3
+  font-size: #{$rootsize-3 / 16 * 100%}
+@mixin rootsize-4
+  font-size: #{$rootsize-4 / 16 * 100%}
+
+// Font-size in rems. Pixel fallbacks for full browser support.
+@mixin fontsize-0($value)
+  font-size: #{$value / $rootsize-0}rem
+@mixin fontsize-1($value)
+  font-size: #{$value / $rootsize-1}rem
+@mixin fontsize-2($value)
+  font-size: #{$value / $rootsize-2}rem
+@mixin fontsize-3($value)
+  font-size: #{$value / $rootsize-3}rem
+@mixin fontsize-4($value)
+  font-size: #{$value / $rootsize-4}rem

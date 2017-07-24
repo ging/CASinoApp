@@ -1,321 +1,223 @@
-nav.navbar-home
-  background-color: rgba(0,0,0,0.1) !important
+nav.navbar-fixed-top
+  padding: 3px 3.6% 0
+  @media (max-width: $screen-sm-max)
+    padding: 3px 0 0
+  .container-fluid
+    padding: 0
+    @media (max-width: $screen-sm-max)
+      padding: 0 15px
 
 nav.navbar-fixed-top
-  font-size: 0.9em
-  padding: 6px 2%
-  background-color: white
-  box-shadow: $box-shadow
-  background: rgba( 255, 255, 255, 0.98)
-  border: 0
-  @media (max-width: $screen-sm-max)
-    padding: 9px 1%
-
   .container-fluid
-    max-width: 2000px
-    margin-left: auto
-    margin-right: auto
-    display: block
-    width: auto
+    margin-top: 3px
+    max-width: 1970px
+  .navbar-header
+    .btn-group
+      a.dropdown-toggle
+        span
+          margin-right: 2px !important
 
 
-    .btn-navbar
-      margin-top: 3px
-      padding: 5px 10px
-      display: none
-      float: right
-      @media (max-width: $screen-sm-max)
-        display: block
+.logo-header
+  display: inline
+  a
+    @include logo-img
+.quick-search
+  .mat
+    .results
+      overflow: hidden
+      max-height: 449px
+      ul
+        width: 98%
+        li
+          &:hover
+          transform: scale(1)
+          -ms-transform: scale(1)
+          -webkit-transform: scale(1)
+        .more
+          padding: 4px 5px
+          max-height: 48px
+      @media (max-width: $screen-xs-max)
+        display: none !important
+  @media (max-width: $screen-xs-max)
+    margin-top: 9px
+.search-nav
+  margin-right: 10px
+  float: right
+  @media (max-width: $screen-xs-max)
+    float: none
+    margin-right: 0
+  .search-query
+    @media (max-width: $screen-sm-max)
+      width: 180px !important
+  form
+    .search_button_class
+      @media (max-width: $screen-xs-max)
+        width: 13%
+        margin-left: 0
+        height: 36px
+        margin-top: -1px
+  .input-group
+    @media (max-width: $screen-xs-max)
+      margin-left: 0px !important
+      width: 100%
+  .search-query
+    width: 265px
+    display: inline
+    @media (max-width: $screen-xs-max)
+      width: 85%
+      margin-right: auto !important
+      margin-left: auto
+    @media (min-width: 1132px)
+      padding-top: 4px
+.dropdown-log
+  @include dropdown-log
 
-    .brand
-      height: auto
-      font-size: 2em
+#dropdownMenuLog
+  @include border-right-radius ($border-radius-small)
+
+.mobile-nav
+  @include hidden-sm
+  @include hidden-md
+  @include hidden-lg
+  li
+    @include border-top-radius ($border-radius-base)
+    @include border-bottom-radius ($border-radius-base)
+    &:hover
+      background-color: $gray-lighter-extra !important
+    a
+      color: $gray !important
+      text-transform: capitalize
+      &:hover,
+      &:focus
+        background-color: $gray-lighter-extra
+  li.open
+    a
+      @include border-top-radius ($border-radius-base)
+      color: $gray-light !important
+      &:hover
+        @include border-top-radius ($border-radius-base)
+        @include border-bottom-radius (0)
+    .dropdown-menu
+      @include dropdown-log
+      background-color: $dropdown-bg
+      &:hover
+        background-color: $dropdown-bg
+      form
+        padding: 0 7px 7px !important
+  li.language
+    ul li
+      padding: 0 9px
+      &:hover
+        background-color: $white !important
+        a
+          color: $text-color !important
+          background-color: $white !important
+      a
+      padding: 0 9px
+  .user
+    margin-bottom: 0
+    padding-left: 0
+    padding-right: 0
+    float: none
+    img
+      width: 18px
+      @include border-top-radius ($border-radius-small)
+      @include border-bottom-radius ($border-radius-small)
+
+  hr
+    margin-top: 6px
+    margin-bottom: 5px
+  li.sign-out
+    margin-bottom: 6px
+
+.desktop-nav
+  @include hidden-xs
+  margin-bottom: 0
+  li
+    min-width: 30px
+    a
+      color: $gray
+      border-color: $border-color
+    &:hover
+      background-color: $white
+  li.btn-group
+    .btn-primary
+      color: white
+    a
+      min-width: 30px
+  ul li
+    &:hover
+      background-color: transparent
+  li.open
+    a
+      @include border-top-radius ($border-radius-base)
+      color: $gray-light !important
+  .user-menu .photo-user
+    background: #007CC8
+
+.user-menu
+  margin-left: 12px !important
+  .tooltip
+    left: 0 !important
+    padding: 0px !important
+    margin: 0 !important
+    position: absolute
+  a.photo-user
+    padding: 0px !important
+    img
+      @include border-left-radius ($border-radius-small)
+      @include fix-img-addon
+  a.dropdown-toggle
+    width: 120px
+    .user_text
       float: left
-      .logo-home
-        color: $white !important
-      .logo
-        font-family: Helvetica Neue, Helvetica, sans-serif !important
-        font-weight: 200
-        color: $orange-gray-75
-        outline: none
-        .logo_bold
-          color: $brand-primary
-          font-family: Helvetica Neue, Helvetica, sans-serif !important
-          font-weight: 600
-    .hidden-phone
+    i
       float: right
-      @media (max-width: $screen-sm-max)
-        display: none
+      margin: 3px 0 0 0
 
-      .navbar-right
-        float: none
-        li
-          padding: 5px 8px
-          a
-            padding: 4px 0
-            outline: none
-            font-weight: 200
-            &:hover, &:active, &:focus
-              color: $brand-primary
-          .menu_bold
-            font-weight: 800
+  .dropdown-toggle:hover
+    border: 1px solid $brand-primary
+  .dropdown-menu
+    li
+      &:hover
+        background: transparent
 
-        .btn-header
-          padding: 0px 7px
-          margin: 5px 0 2px 5px
+.headernav
+  a
+    display: inline-block
+    &:first-child
+      margin-right: 2px
 
-          a:hover
-            color: $brand-primary
-        .btn-access > a
-          color: white
-          &:hover, &:focus, &:active
-            color: white
+form.navbar-form-search
+  margin-right: 12px
+  @media (max-width: $screen-xs-max)
+    margin-right: 0
 
-        .dropdown
-          .dropdown-menu
-            padding: 10px !important
-            border-radius: $border-radius-base
-            background-color: $gray-dark
+#search_button
+  @include hidden-xs
 
-          .access-form
-            margin-top: 5px
-          .user-menu, .add-menu
-            padding: 0 !important
-            li
-              padding: 0
-              i
-                width: 20px
-              a
-                padding: 8px
-                color: $gray-light
-                &:hover, &:active,&:focus
-                  background-color: $gray-darker !important
-                  color: white
-              .notification
-                color: $brand-primary
+.navbar-collapse
+  overflow-x: visible
+  padding-right: 0
+  padding-left: 0
+  border-top: none
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1)
+  -webkit-overflow-scrolling: touch
 
-          .dropdown-menu:before, .dropdown-menu:after
-            display: none
-          form
-            margin: 0
-            min-width: 285px
-            .checkbox
-              display: block
-              width: 0
-              color: white
-            input[type="email"]
-              margin-bottom: 5px
-            input[type=checkbox]
-              opacity: 1
-            a
-              color: gray
-              font-size: 0.9em
-              float: left
-              &:hover
-                color: white
-            .btn
-              margin-top: 15px
-        .dropdown.open > .dropdown-toggle,
-        .dropdown.active > .dropdown-toggle,
-        .dropdown.open.active > .dropdown-toggle
-          background: transparent !important
+#new_user
+  padding: 7px
 
-        .photo_user
-          @include photo-user
+.results
+  ul
+    @include items
+    li
+      @include excursion-small
 
-      //************************
-      //input de quick search
-      //************************
-      .search-ui
-        float: right
-        padding: 5px 10px
-        .search-query
-          width: 250px !important
-          float: left
-          font-size: 0.95em
-        .quick-search
-          .search-nav
-            margin-left: -3px
-            @media (max-width: $screen-xs-max)
-              margin-left: 0
-            input[type="text"]
-              height: 30px
-
-            .search_button_class
-              margin: 0 0 0 5px
-              padding: 3px 8px 4px
-              float: left
-            .mat
-              z-index: 10
-              display: none
-              position: absolute
-              top: 46px
-              width: 265px
-              background-color: rgba(85,85,85,0.97)
-              @include border-bottom-radius ($border-radius-base)
-              @media (max-width: 768px)
-                width: 80.5%
-                left: 15px
-                top: 87px
-              @media (max-width: 635px)
-                width: 80%
-              @media (max-width: 560px)
-                width: 79.2%
-              @media (max-width: 485px)
-                width: 78%
-              @media (max-width: 430px)
-                width: 77%
-              .spinner
-                margin: 35px auto 0 !important
-                display: none
-              .query_too_short
-                @include border-bottom-radius ($border-radius-base)
-                color: $white
-                text-align: center
-                padding: 3px
-                margin-top: 2px
-              .no_results
-                display: block
-                @include border-bottom-radius ($border-radius-base)
-                color: $white
-                background-color: $brand-primary
-                text-align: center
-                padding: 3px
-                margin-top: 2px
-
-              .results
-                max-height: 431px
-                height: auto
-                ul
-                  width: 95%
-                  padding-left: 0
-                  float: none
-                  @include border-bottom-radius ($border-radius-base)
-                  @include center-block
-                  @include items
-                  .add-item
-                    display: none
-                  li
-                    @include excursion-small
-                    margin: 3px 7px
-                    width: 95%
-                    border: none
-                    max-height: 43px
-                    .container-img
-                      width: 27% !important
-                      .avatar img
-                        margin-top: -7px
-                      .img-box
-                        i
-                          font-size: 35px
-                          padding-top: 4px
-                    .caption
-                      padding-top: 2px
-                      width: 73%
-                      h6
-                        height: 20px
-                      h6, .count-followers
-                        text-align: left
-                    .corner-item, .add, .info-bottom, hr
-                      display: none
-                  li, .container-img, .caption
-                    max-height: 43px
-
-                  .more
-                    display: block
-                    clear: both
-                    text-align: center
-                    height: auto
-                    margin: 7px 7px 10px
-                    padding: 5px
-                    a
-                      color: $gray-darker
-                      font-family: $corporate-font-family-sans-serif-Medium
-                      text-decoration: none
-                    &:hover
-                      background: $gray-darker-extra
-                      a
-                        color: $white
-                        &:hover
-                          background-color: $gray-darker-extra !important
-                  .img-box
-                    padding-bottom: 0
-
-
-
-
-    //****************************************************
-    //menu for small screens (phones&tablets) up to 991px
-    //****************************************************
-    .hidden-desktop
-      .navbar-nav
-        margin: 40px 0 5px 0
-        float: none
-        background-color: $gray-darker
-        padding: 10px
-
-        li
-          float: none
-          a
-            color: $orange-gray-45
-            font-size: 1.2em
-            &:hover
-              color: white
-          i
-            margin-right: 10px
-          .dropdown-menu
-            padding: 10px
-            margin: 0 0 0 18px
-            border-radius: $border-radius-base
-            .form-group
-              margin-left: 0 !important
-              margin-right: 0 !important
-            //log in
-            input[type="email"]
-              margin-bottom: 3px
-            .checkbox
-              padding: 0 5px
-              .lbl
-                color: white
-            .remember_password
-              margin: 10px 0 0 0
-              a
-                color: black
-            //languages
-            li > a
-              padding: 5px
-              color: white
-              img
-                margin-right: 5px
-
-        .user
-          margin: 0
-          a
-            line-height: 2.5
-            font-weight: 600
-            img
-              border-radius: $border-radius-base
-              border: 1px solid $orange-gray-45
-              height: 30px
-              margin-right: 3px
-        hr
-          margin: 0
-        .open > a
-          background-color: white !important
-        .navbar-search
-          width: 85%
-          margin-bottom: 5px
-          padding: 10px
-          input
-            float: left
-            width: 80%
-          button
-            float:left
-            margin-left: 3px
-            padding: 7px 6px 6px
-            i
-              margin: 0
-    //****************************************************
+#nav-collapse-out
+  .desktop-nav
+    float: right
+    padding-left: 0
 
 #warning_cookie_bar
   display: none
@@ -323,26 +225,40 @@ nav.navbar-fixed-top
   margin: 0px
   text-align: center
   color: $white
-  background-color: rgba(0, 0, 0, 0.8)
+  background-color: rgba(0, 0, 0, 0.7)
   height: auto
-  z-index: 999
+  z-index: 1010
   position: fixed
-  top: 52px
-  padding: 40px
-
+  top: 50px
+  padding: 0.5rem 0em
   p
     border-radius: 0 0 10px 10px
-    color: $white
-    margin: 0 auto
-    font-family: $corporate-font-family-sans-serif-Medium
+    color: #fff
+    margin: 5px auto
+    font-family: "opensans-regular",Arial,sans-serif
     width: 80%
-  a
-    color: $gray
-    font-family: $corporate-font-family-sans-serif-Bold
-    border: 1px solid $gray
-    margin: 20px 0 0 0
-    &:hover
-      color: $white
-      border: 1px solid $white
-  h3
-    margin-top: 0
+    display: inline-block
+
+#ckH
+  font-weight: bold
+  font-size: 1.2rem
+
+#boxieOk
+  margin-top: 0.3rem
+
+#cookie_close
+  font-size: 1.2rem
+  -webkit-user-select: none
+  color: white
+  -moz-user-select: none
+  -ms-user-select: none
+  border: solid 1px white
+  padding: 0.1rem 0.6rem
+  border-radius: 5px
+  text-align: center
+
+nav.navbar
+  .navbar-collapse
+    ul.nav-pills
+      li
+        text-align: center

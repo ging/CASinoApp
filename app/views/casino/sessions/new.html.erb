@@ -11,7 +11,10 @@
   <div class="login box">
 
     <div class="logo">
-       <%= image_tag "orange/3.jpg" %>
+            <%= image_tag('vish/vishphoto2.jpg',:class => "vishphoto"); %>
+            <%= image_tag('vish/vishphoto3.jpg',:class => "vishphoto_mobile"); %>
+            <div class="gradient1"></div>
+            <%= image_tag('vish/arbol-05.svg',:class => "tree"); %>
     </div>
 
     <div class="form">
@@ -35,11 +38,9 @@
           <%= check_box_tag :rememberMe, 1, params[:rememberMe] %> <%= t('login.label_remember_me') %>
         <% end %>
           <%= button_tag t('login.label_button'), :id => "submit_button",:class => 'button btn btn-primary pull-right' %>
-      <% end %>      
+      <% end %>
       <div class="remember_password"><a href="http://educainternet.es/users/password/new">¿Olvidaste tu contraseña?</a></div>
     </div>
   </div>
 
 </div>
-
-

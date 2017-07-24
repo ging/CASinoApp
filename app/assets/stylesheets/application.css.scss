@@ -18,11 +18,12 @@
 @import "font-awesome";
 
 
-/* Orange styles */
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/scaffolding';
 @import 'base/buttons';
+@import 'base/tipography';
+@import 'base/rewrites';
 @import 'layouts/header';
 @import 'layouts/footer';
 @import 'layouts/pages';

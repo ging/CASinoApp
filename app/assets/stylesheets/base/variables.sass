@@ -1,65 +1,95 @@
+//
 // Variables
 // --------------------------------------------------
 
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
-$black: #000000
-$gray-darker-extra: #333333
-$gray-darker: #353535
-$gray-dark: #5E5E5E
-$gray: #9B9B9B
-$gray-light: #C7C7C7
-$gray-lighter: #E7E7E7
-$gray-lighter-extra: #EDEDED
-$white: #FFFFFF
+$black:                  #000000
+$gray-darker-extra:      #333333
+$gray-darker:            #353535
+$gray-dark:              #5E5E5E
+$gray:                   #9B9B9B
+$gray-light:             #C7C7C7
+$gray-lighter:           #E7E7E7
+$gray-lighter-extra:     #EDEDED
+$white:                  #FFFFFF
 
-//Orange colors
-// -------------------------
-$orange-primary: #ff6600
-$orange-gray-50: #808080
-$brand-secundary: $orange-gray-50
 
-$orange-gray-25: #CCCCCC
-$orange-gray-45: #999999
-$orange-gray-75: #666666
+//$gray-regular:           #B2B2B2
+//$gray-medium:            #767676
+//$gray-extra:           	 #DDDDDD
 
-$brand-primary: $orange-primary
+$brand-primary:          #E90055
+$brand-primary-2:        #008FD1
+
+$brand-secundary:        #008FD1
+
+$brand-success:          #5cb85c
+$brand-info:             #5bc0de
+$brand-warning:          #f0ad4e
+$brand-danger:           #d9534f
+
+
+$auxiliarColor:          $white
 
 //== Scaffolding
 //
 // ## Settings for some of the most global styles.
 
-//** Background color for `<body>`
-$body-bg: #E7E7E7 !default
-//** Global text color on `<body>`
-$text-color: $gray-dark !default
+//** Background color for `<body>`.
+$body-bg:               #E7E7E7
+//** Global text color on `<body>`.
+$text-color:            $gray-dark
 
 //** Global textual link color.
-$link-color: $brand-secundary !default
-
-//** Link hover color set via `darken()` function
-$link-hover-color: darken($link-color, 10%) !default
+$link-color:            $brand-secundary
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 10%)
 //** General color for borders.
-$border-color: $orange-gray-45 !default
-$timeline-panel-border: lighten($border-color, 16%) !default
-$border-radius-base: 0
-$box-shadow: (0 1px 10px rgba(0, 0, 0, 0.2))
+$border-color:          $text-color
 
+$timeline-panel-border:  lighten($border-color, 16%)
+
+$border-radius-base: 5
+$box-shadow: (0 1px 10px rgba(0, 0, 0, 0.2))
 
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 $corporate-font-family-sans-serif-Light:          "opensans-light", Arial, sans-serif
-$corporate-font-family-sans-serif-Regular:        "Helvetica Neue",Helvetica,sans-serif
+$corporate-font-family-sans-serif-Regular:        "opensans-regular", Arial, sans-serif
 $corporate-font-family-sans-serif-Medium:         "opensans-semibold", Arial, sans-serif
 $corporate-font-family-sans-serif-Bold:           "opensans-bold", Arial, sans-serif
 $corporate-font-family-sans-serif-Extrabold:      "opensans-extrabold", Arial, sans-serif
 
-
 $font-family-sans-serif:               $corporate-font-family-sans-serif-Regular
 $font-family-sans-serif-titles:        "Helvetica Neue",Helvetica,sans-serif
 
+$corporate-font-family-sans-serif-LightItalic:          "opensans-lightItalic", Arial, sans-serif
+$corporate-font-family-sans-serif-RegularItalic:        "opensans-regularItalic", Arial, sans-serif
+$corporate-font-family-sans-serif-MediumItalic:         "opensans-semiboldItalic", Arial, sans-serif
+$corporate-font-family-sans-serif-BoldItalic:           "opensans-boldItalic", Arial, sans-serif
+$corporate-font-family-sans-serif-ExtraboldItalic:      "opensans-extraboldItalic", Arial, sans-serif
 
 
-$zindex-footer-fixed: 1040 !default
+$zindex-footer-fixed: 1040
+
+$btn-secundary-color:            $white
+$btn-secundary-bg:               $brand-primary-2
+$btn-secundary-border:           $brand-primary-2
+
+
+// Breakpoint sizes in ems. Note: not relative to root font-size.
+$break-0: 0                          // Mobile first yo
+$break-1: (480 / 14) * 1em         // 480px   -  Small tablet up
+$break-2: (768 / 14) * 1em           // 768px   -  Large tablet up
+$break-3: (992 / 14) * 1em          // 979px  -  Desktop up
+$break-4: (1200 / 14) * 1em          // 1200px  -  Large desktop up
+
+// Root font-sizes. Set to half desired line-height of body text.
+$rootsize-0: 9                      // 24px line-height body text
+$rootsize-1: 11                      // 28px line-height body text
+$rootsize-2: 12                      // 30px line-height body text
+$rootsize-3: 14                    // 34px line-height body text
+$rootsize-4: 15                     // 36px line-height body text
