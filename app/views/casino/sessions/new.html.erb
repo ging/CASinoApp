@@ -39,8 +39,7 @@
         <% end %>
           <%= button_tag t('login.label_button'), :id => "submit_button",:class => 'button btn btn-primary pull-right' %>
       <% end %>
-
-      <div class="remember_password"><a href="<%=CASinoApp::Application.config.APP_CONFIG["vish_url"]%>/users/password/new">¿Olvidaste tu contraseña?</a></div>
+      <div class="remember_password"><a href="<%=CASinoApp::Application.config.APP_CONFIG["vish_url"]%>/users/password/new"><%= t('login.remember_password') %></a></div>
     </div>
   </div>
 

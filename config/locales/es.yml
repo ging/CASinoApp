@@ -13,6 +13,9 @@ es:
     terms_use: "Condiciones de uso"
   help: "ayuda"
   help_manual: "Descargar el manual de usuario"
+  login_credential_acceptor:
+    invalid_login_credentials: "Nombre de usuario o contraseña incorrectos. Inténtelo de nuevo. Si tiene problemas con el acceso puede ponerse en contacto con nosotros en contacto@educainternet.es"
+    invalid_login_ticket: "Vuelva a hacer login por favor"
   login:
     label_username: "Email"
     label_password: "Contraseña"
@@ -23,6 +26,7 @@ es:
     msg_intro_educa: "Introduce tus datos para entrar a ViSH"
     msg_intro_first: "Muchas gracias por registrarte en ViSH. Vuelve a introducir tus credenciales y te redirigiremos al curso"
     msg_intro_mooc: "Introduce tus datos para entrar al curso"
+    remember_password: "¿Olvidaste la contraseña?"
     title: "Accede"
   overview_title: "¿Qué es ViSH?"
   site:

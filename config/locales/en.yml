@@ -13,6 +13,9 @@ en:
     terms_use: "Terms of use"
   help: "help"
   help_manual: "Download user manual"
+  login_credential_acceptor:
+    invalid_login_credentials: "Invalid username or email. Please try again"
+    invalid_login_ticket: "Login again please."
   login:
     label_username: "Email"
     label_password: "Password"
@@ -23,6 +26,7 @@ en:
     msg_intro_educa: "Write your credentials to access ViSH"
     msg_intro_first: "Thank you very much for registering in ViSH. Write your credentials again and you will access the course"
     msg_intro_mooc: "Write your credentials to access the course"
+    remember_password: "Did you forget your password?"
     title: "Login"
   overview_title: "ViSH Overview"
   site:
