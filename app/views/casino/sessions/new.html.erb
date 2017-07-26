@@ -23,9 +23,9 @@
         <h4><%=t('login.title')%></h4>
         <%if params[:first]%>
           <div class="msg_intro"><%=t('login.msg_intro_first')%></div>
-        <%elsif params[:service] && (params[:service].starts_with? "http://educainternet.es")%>
+        <%elsif params[:service] && (params[:service].starts_with? CASinoApp::Application.config.APP_CONFIG["vish_url"])%>
           <div class="msg_intro"><%=t('login.msg_intro_educa')%></div>
-        <%elsif params[:service] && (params[:service].starts_with? "http://moodle.educainternet.es")%>
+        <%elsif params[:service] && (params[:service].starts_with? CASinoApp::Application.config.APP_CONFIG["moodle_url"])%>
           <div class="msg_intro"><%=t('login.msg_intro_mooc')%></div>
         <%end%>
         <%= hidden_field_tag :lt, CASino::LoginTicket.create.ticket %>
@@ -39,7 +39,8 @@
         <% end %>
           <%= button_tag t('login.label_button'), :id => "submit_button",:class => 'button btn btn-primary pull-right' %>
       <% end %>
-      <div class="remember_password"><a href="http://educainternet.es/users/password/new">¿Olvidaste tu contraseña?</a></div>
+
+      <div class="remember_password"><a href="<%=CASinoApp::Application.config.APP_CONFIG["vish_url"]%>/users/password/new">¿Olvidaste tu contraseña?</a></div>
     </div>
   </div>
 
