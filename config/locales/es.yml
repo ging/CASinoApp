@@ -6,7 +6,7 @@ es:
     survey: "Encuesta de EducaInternet"
     title: "about"
   help: "ayuda"
-  help_manual: "Download user manual"
+  help_manual: "Descargar el manual de usuario"
   login_credential_acceptor:
     invalid_login_credentials: "Nombre de usuario o contraseña incorrectos. Inténtelo de nuevo. Si tiene problemas con el acceso puede ponerse en contacto con nosotros en contacto@educainternet.es"
     invalid_login_ticket: "Vuelva a hacer login por favor"
@@ -20,6 +20,7 @@ es:
     msg_intro_educa: "Introduce tus datos para entrar a EducaInternet"
     msg_intro_first: "Muchas gracias por registrarte en EducaInternet. Vuelve a introducir tus credenciales y te redirigiremos al curso"
     msg_intro_mooc: "Introduce tus datos para entrar al curso"
+    remember_password: "¿Olvidaste la contraseña?"
     title: "Accede"
   orange_front:
     footer:

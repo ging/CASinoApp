@@ -6,7 +6,7 @@ en:
     survey: "EducaInternet survey"
     title: "about"
   help: "help"
-  help_manual: "Descargar el manual de usuario"
+  help_manual: "Download user manual"
   login_credential_acceptor:
     invalid_login_credentials: "Invalid username or email. Please try again"
     invalid_login_ticket: "Login again please."
@@ -20,6 +20,7 @@ en:
     msg_intro_educa: "Write your credentials to access EducaInternet"
     msg_intro_first: "Thank you very much for registering in EducaInternet. Write your credentials again and you will access the course"
     msg_intro_mooc: "Write your credentials to access the course"
+    remember_password: "Did you forget your password?"
     title: "Login"
   orange_front:
     footer:
