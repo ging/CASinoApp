@@ -11,7 +11,7 @@
   <div class="login box">
 
     <div class="logo">
-       <%= image_tag "orange/3.jpg" %>
+       <%= image_tag "orange/home.jpg" %>
     </div>
 
     <div class="form">
@@ -34,9 +34,10 @@
         <%= label_tag :rememberMe do %>
           <%= check_box_tag :rememberMe, 1, params[:rememberMe] %> <%= t('login.label_remember_me') %>
         <% end %>
+        <div class="remember_password"><a href="<%=CASinoApp::Application.config.APP_CONFIG["vish_url"]%>/users/password/new"><%= t('login.remember_password') %></a></div>
           <%= button_tag t('login.label_button'), :id => "submit_button",:class => 'button btn btn-primary pull-right' %>
       <% end %>
-      <div class="remember_password"><a href="<%=CASinoApp::Application.config.APP_CONFIG["vish_url"]%>/users/password/new"><%= t('login.remember_password') %></a></div>
+
     </div>
   </div>
 

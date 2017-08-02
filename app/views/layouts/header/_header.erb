@@ -1,2 +1,62 @@
 
-<%= render :partial => 'layouts/header/header_signed_out' %>
+<% front_or_home = (params[:controller] == 'home' || params[:controller] == 'frontpage') ? true:false%>
+
+<nav class="navbar navbar-default navbar-fixed-top <%='navbar-home' if front_or_home%>" role="navigation">
+  <div class="container-fluid">
+
+
+      <!-- BRAND -->
+      <div class="brand">
+        <a href="/" class="logo <%='logo-home' if front_or_home%>">Educa<span class="logo_bold">Internet</span></a>
+      </div>
+
+      <div class=" hidden-phone hidden-tablet">
+
+        <!-- MENU -->
+        <ul class="nav navbar-nav navbar-right">
+
+          <!-- Help button -->
+          <li class=" dropdown toggler ">
+            <div data-toggle="dropdown" class="btn btn-icon <%='btn-home-icon' if front_or_home%> without-dropdown-toggle">
+              <i class="fa fa-question-circle"></i>
+            </div>
+
+            <ul class="dropdown-menu add-menu" role="menu" >
+
+              <li>
+                <a href="http://educainternet.es/overview">
+                  <i class="fa fa-question"> </i>
+                  <span><%= t('overview_title') %></span>
+                </a>
+              </li>
+
+              <li>
+                <%#= link_to user_manual_path do %>
+                <a target="_blank" href="http://educainternet.es/EducaInternet.pdf">
+                  <i class='fa fa-download'> </i>
+                  <span><%= t('help_manual')%></span>
+                </a>
+                <%# end %>
+              </li>
+              <li>
+                 <a target="_blank" href="https://www.youtube.com/channel/UCo-73n6eZBWNBs2gvKLyBhQ">
+                   <i class="fa fa-youtube-play"> </i>
+                   <span><%= t('youtube') %></span>
+                 </a>
+              </li>
+              <li>
+                <a href="mailto:virtual.science.hub@gmail.com">
+                  <i class="fa fa-envelope-o"> </i>
+                  <span><%= t('about.contact') %></span>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+
+  </div>
+</nav>
+
