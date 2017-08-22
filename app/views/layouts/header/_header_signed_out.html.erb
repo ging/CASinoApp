@@ -1,23 +1,12 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse-out">
-        <i class="fa fa-angle-down"></i>
-      </a>
-
-      <!--logo-->
+    <!--logo-->
       <div class="logo-header">
         <%= link_to(image_tag('vish/brand.svg', :alt => t('site.name')), '/', :class => "logo"); %>
       </div>
-
-      <!--browse-->
-    </div>
-    <!--collapse-->
-    <div class="collapse navbar-collapse" id="nav-collapse-out">
-
-      <!-- desktop -->
-      <ul class="btn-toolbar desktop-nav">
+    <div class="" id="nav-collapse-out">
+      <ul class="btn-toolbar nav">
           <li class="btn-group">
             <a type="button" class="btn btn-default" href="<%=CASinoApp::Application.config.APP_CONFIG["vish_url"]%>/users/sign_up">
               <%=t("sign_up")%>
@@ -27,56 +16,6 @@
             <a type="button" id="drop3" class="btn btn-primary" href="/cas/cas/login"><%=t("sign_in")%></a>
           </li>
       </ul>
-
-      <!-- mobile/tablet -->
-      <div class="nav-collapse navbar-responsive-collapse collapse hidden-desktop  MOBILE ">
-        <%= render partial: 'layouts/header/header_signed_out_mobile' %>
-      </div>
     </div>
   </div>
 </nav>
-
-
-<!-- SCRIPT FOR AUTOMATIC BOOTSTRAP-DROPDOWN HOVER -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    (function ($, window, delay) {
-    var theTimer = 0;
-    var theElement = null;
-      var theLastPosition = {x:0,y:0};
-    $('.toggler .without-data-toggle')
-      .closest('li')
-      .on('mouseenter', function (inEvent) {
-      if (theElement) theElement.removeClass('open');
-      window.clearTimeout(theTimer);
-      theElement = $(this);
-
-      theTimer = window.setTimeout(function () {
-        theElement.addClass('open');
-      }, delay);
-    })
-      .on('mousemove', function (inEvent) {
-          if(Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 ||
-             Math.abs(theLastPosition.y - inEvent.ScreenY) > 4)
-          {
-              theLastPosition.x = inEvent.ScreenX;
-              theLastPosition.y = inEvent.ScreenY;
-              return;
-          }
-
-      if (theElement.hasClass('open')) return;
-      window.clearTimeout(theTimer);
-      theTimer = window.setTimeout(function () {
-        theElement.addClass('open');
-      }, delay);
-    })
-      .on('mouseleave', function (inEvent) {
-      window.clearTimeout(theTimer);
-      theElement = $(this);
-      theTimer = window.setTimeout(function () {
-        theElement.removeClass('open');
-      }, delay);
-    });
-  })(jQuery, window, 0); // 200 is the delay in milliseconds
-});
-</script>
