@@ -42,4 +42,6 @@ es:
     label_vish: "Go To EducaInternet"
     label_moodle: "Go To Courses"
     title: "Successfully Logged In"
+  sign_in: "Inicia Sesión"
+  sign_up: "Registrate"
   youtube: "Canal EducaInternet en Youtube"
