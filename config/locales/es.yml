@@ -50,4 +50,6 @@ es:
     title: "Successfully Logged In"
   site:
     name: "ViSH"
+  sign_in: "Inicia Sesión"
+  sign_up: "Registrate"
   youtube: "Canal ViSH en Youtube"
