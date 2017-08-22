@@ -28,7 +28,27 @@ en:
     msg_intro_mooc: "Write your credentials to access the course"
     remember_password: "Did you forget your password?"
     title: "Login"
-  overview_title: "ViSH Overview"
+  logout:
+    logged_out_without_url: "Logged out"
+    logged_out_with_url: "Logged out"
+    title: "Logged out"
+  orange_front:
+    footer:
+      cookies: "Cookies"
+      rights: "All rights reserved"
+      faq: "FAQ"
+      legal: "Legal notice"
+      privacity: "Privacy policy"
+      conditions: "Conditions of use"
+      contributors: "Advisory Committee"
+  overview_title: "EducaInternet Overview"
+  sessions:
+    currently_logged_in_as: "Currently Logged In As"
+    label_logout_button: "Logout"
+    label_vish: "Go To EducaInternet"
+    label_moodle: "Go To Courses"
+    title: "Successfully Logged In"
+    overview_title: "ViSH Overview"
   site:
     name: "ViSH"
   youtube: "ViSH Youtube Channel"

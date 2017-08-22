@@ -1,7 +1,9 @@
 #Copy this file to application_config.yml
 #Configure here all the variables of your CAS server instance.
 
+#IMPORTANT: don't use http or https before the URLs, it is automatically added
+
 development:
-  moodle_url: "http://moodle.vishub.org"
+  moodle_url: "moodle.vishub.org"
   sitename: "EducaInternet"
-  vish_url: "http://localhost:3000"
+  vish_url: "localhost:3000"
