@@ -14,7 +14,7 @@ es:
   help: "ayuda"
   help_manual: "Descargar el manual de usuario"
   login_credential_acceptor:
-    invalid_login_credentials: "Nombre de usuario o contraseña incorrectos. Inténtelo de nuevo. Si tiene problemas con el acceso puede ponerse en contacto con nosotros en contacto@educainternet.es"
+    invalid_login_credentials: "Nombre de usuario o contraseña incorrectos. Inténtelo de nuevo. Si tiene problemas con el acceso puede ponerse en contacto con nosotros en virtual.science.hub@gmail.com"
     invalid_login_ticket: "Vuelva a hacer login por favor"
   login:
     label_username: "Email"
