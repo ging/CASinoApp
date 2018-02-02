@@ -20,6 +20,8 @@ es:
     msg_intro_educa: "Introduce tus datos para entrar a EducaInternet"
     msg_intro_first: "Muchas gracias por registrarte en EducaInternet. Vuelve a introducir tus credenciales y te redirigiremos al curso"
     msg_intro_mooc: "Introduce tus datos para entrar al curso"
+    register1: "No tienes cuenta? "
+    register2: "Registrarme"
     remember_password: "¿Olvidaste la contraseña?"
     title: "Accede"
   orange_front:

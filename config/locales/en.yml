@@ -20,6 +20,8 @@ en:
     msg_intro_educa: "Write your credentials to access EducaInternet"
     msg_intro_first: "Thank you very much for registering in EducaInternet. Write your credentials again and you will access the course"
     msg_intro_mooc: "Write your credentials to access the course"
+    register1: "Do not have an account?"
+    register2: "Register"
     remember_password: "Did you forget your password?"
     title: "Login"
   orange_front:

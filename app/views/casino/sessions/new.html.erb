@@ -34,7 +34,10 @@
         <%= label_tag :rememberMe do %>
           <%= check_box_tag :rememberMe, 1, params[:rememberMe] %> <%= t('login.label_remember_me') %>
         <% end %>
-        <div class="remember_password"><a href="<%=CASinoApp::Application.config.APP_CONFIG["vish_url"]%>/users/password/new"><%= t('login.remember_password') %></a></div>
+        <div class="extra_options">
+          <span class="remember_password"><a href="<%=CASinoApp::Application.config.APP_CONFIG["vish_url"]%>/users/password/new"><%= t('login.remember_password') %></a></span>
+          <span class="register_new"><%= t('login.register1') %><a href="<%=CASinoApp::Application.config.APP_CONFIG["vish_url"]%>/users/sign_up"><%= t('login.register2') %></a></span>
+        </div>
           <%= button_tag t('login.label_button'), :id => "submit_button",:class => 'button btn btn-primary pull-right' %>
       <% end %>
 

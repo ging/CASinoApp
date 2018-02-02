@@ -36,9 +36,14 @@
         button
           position: relative
           bottom: -48px
-        .remember_password
-          a
-            color: $orange-primary
+        .extra_options
+          display: flex
+          flex-flow: row nowrap
+          justify-content: space-between
+          align-items: center
+          .remember_password, .register_new
+            a
+              color: $orange-primary
 
 
 /* responsive (media querys) */
